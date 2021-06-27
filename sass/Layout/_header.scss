@@ -1,0 +1,113 @@
+header {
+    .navbar{        
+        .navbar-brand {
+            img{
+                width:120px;
+            }
+        }
+        .udeBtnHead{
+            @include styleText($color-black-light,$fs-1,$fw-normal);   
+            padding:$pd-3 $pd-4;    
+            border:1px solid transparent; 
+            &:hover{               
+                background-color:$color-white-cream;
+                border-radius:$mg-0 +1;              
+            }         
+        }
+        
+        .navbar-nav{
+            .ude-cart{
+                @include styleText($color-black-light,$fs-1,$fw-normal); 
+                text-align:center;
+
+                .fa-shopping-cart{
+                width:40px;
+                height:40px;
+                line-height: 40px;    
+                    &:hover{
+                        background-color: $color-white-cream;
+                    }
+                }
+                
+                
+            }
+        }
+        .navWhiteBtn{
+            color:$color-gray-4;
+            background-color:$color-white-0;
+            border:1px solid $color-gray-4;
+            &:hover{
+                color:$color-black-0;
+                border-color:$color-black-0;
+            }
+        }    
+    
+    
+    }
+}
+
+//Responsive
+.ude-navRight{
+    //1248px
+    @include responsive('extra-large-nav'){
+        .business{
+            margin: 0 !important;
+        }
+    }
+    
+    //1200px
+    @include responsive('extra-large'){
+        //code sẽ được gắn vào vị trí của @content
+        .business,.teach{
+            display: none;
+        }
+    }
+
+    //923px
+    @include responsive('large-nav'){
+        .ude-cart{
+            .fa-shopping-cart{
+                width:30px !important;
+                height:30px !important;
+                line-height: 30px !important;   
+            }    
+        }
+        
+    }
+
+    //768px
+    @include responsive('medium'){
+        //code sẽ được gắn vào vị trí của @content
+        .logIn-btn, .signUp-btn{
+            display: none;
+        }    
+        
+    }
+}
+
+.ude-navLeft{
+      //768px
+      @include responsive('medium'){
+        //code sẽ được gắn vào vị trí của @content
+       
+        .nav-cate,.header__form{
+            display: none;
+        }
+        .navbar-brand{
+            margin: auto;
+        }
+        
+        
+    }
+}
+
+header{
+    @include responsive('medium'){
+        .navbar-toggler{
+            padding-left:0 !important;
+            .fa-bars{
+                line-height: 1.2em;
+            }
+        }
+    }
+}

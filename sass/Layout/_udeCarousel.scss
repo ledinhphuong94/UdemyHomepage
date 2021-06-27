@@ -1,0 +1,86 @@
+.udemyCarousel {
+    background: url('../img/cover.jpg');
+    height: 81vh;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+
+    .udeCarousel__text {
+        padding-left: 0;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        .udeCarousel__text__head{
+            padding-right:35%;
+            h1 {
+                @include styleText($color-white-0, $fs-4, $fw-bold-1);
+                margin-bottom: 10px;
+                text-shadow: 0 2px 4px rgba(41, 48, 59, 0.55);
+            }
+            p {
+                @include styleText($color-white-0, $fs-5, $fw-normal);
+                line-height: 1.61;
+                margin-bottom: 20px;
+            }
+        }
+
+            
+    }
+
+    .input-group {
+        padding-right:30%;
+        input {
+            @include styleText($color-black-0, $fs-2, $fw-slim);
+            background-color: $color-white-0;
+            padding: $pd-1 + 1 $pd-4 + 2;
+            height: 50px;
+            border-color: $color-trans;
+        }
+        .input-group-text {
+            background-color: $color-white-0;
+            height: 50px;
+            &:hover {
+                background: $color-red-0;
+            }
+        }
+    }
+}
+
+.keyWords{
+    background:linear-gradient(-45deg, $color-red-0 0%,$color-purple 100%);
+    margin-bottom:$fs-3;
+    @include styleText($color-white-0,$fs-5,$fw-normal);
+    h3{
+        @include styleText($color-white-0,$fs-5,$fw-bold-1);
+        margin:0; 
+    }
+    p {
+        margin:0;
+        font-size: $fs-0;
+    }
+    i{
+        font-size: $fs-6;
+        padding-right: 15px;
+    }
+}
+
+
+// Responsive
+.udemyCarousel {
+    @include responsive("small") {
+        .udeCarousel__text {
+            .udeCarousel__text__head{
+                padding-right:40%;
+                h1 {
+                    font-size: $fs-3;
+                    font-weight: $fw-bold-3;
+                }
+            }
+            .input-group {
+                input{
+                    font-size: $fs-0+1;
+                }
+            }
+        }
+    }
+}

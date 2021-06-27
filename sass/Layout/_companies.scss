@@ -1,0 +1,45 @@
+.testimonial__companies{
+    padding:$pd-5;
+    background-color: $color-gray-5;
+    text-align:center;
+    small{
+        @include styleText($color-gray-4,$fs-1,$fw-normal);
+        padding:$pd-4+1;
+    }
+    .companies_logo{
+        padding-top:20px;
+        display:flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+    }
+
+    .moreInfo{
+        .moreInfo__item{
+            padding:28px 30px;
+            h3{
+                @include styleText($color-black-0,$fs-5+1,$fw-bold-1);
+            }
+            p{
+                @include styleText($color-black-0,$fs-0+1,$fw-bold-3);
+            }
+        }
+        
+    }
+}
+
+//Responsive
+.testimonial__companies{
+    //768px
+    @include responsive("medium") {
+        .companies_logo {
+            div{
+                width:80%;
+                padding:$pd-5;
+            }
+        }
+        .moreInfo__item{
+            border:none !important;
+        }
+
+    }
+}

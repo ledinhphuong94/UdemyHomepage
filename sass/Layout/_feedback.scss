@@ -1,0 +1,59 @@
+.feedback {
+    background-color: $color-gray-5;
+    padding: $pd-5 0;
+    h2 {
+        @include styleText($color-black-0, $fs-3, $fw-bold-1);
+    }
+    .feedback__content {
+        position: relative;
+        .owl-prev {
+            @extend .carousel_button;
+            left: -30px;
+            top: 30%;
+            opacity: 1 !important;
+            background-color: $color-white-0 !important;
+            &:hover{              
+                background-color: $color-white-0;
+            }
+            span {
+                color: $color-blue;
+                font-size: $fs-3;
+            }
+        }
+
+        .owl-next {
+            @extend .carousel_button;
+            right: -30px;
+            top: 30%;
+            opacity: 1 !important;
+            background-color: $color-white-0 !important;
+            &:hover{              
+                background-color: $color-white-0;
+            }
+            span {
+                color: $color-blue;
+                font-size: $fs-3;
+            }
+        }
+        .disabled {
+            display: none !important;
+        }
+
+        .item {
+            background-color: $color-white-0;
+            padding: $pd-2;
+            min-height: 250px;
+            img {
+                width: 64px;
+                height: 64px;
+                border-radius: 50%;
+                display: inline-block;
+                margin-right: 18px;
+            }
+            p {
+                @include styleText($color-black-0, $fs-0 + 1, $fw-bold-3);
+                padding-top: $pd-1;
+            }
+        }
+    }
+}

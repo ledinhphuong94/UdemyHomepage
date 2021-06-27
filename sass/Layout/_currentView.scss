@@ -1,0 +1,43 @@
+.currentView{
+    padding:$pd-4;
+    h2{
+        @include styleText($color-black-light,$fs-5+1,$fw-bold-3);
+        margin-bottom:$pd-1;
+    }
+    .currentView__courses{
+        display:relative;
+        .item{
+            @extend .course_info;
+            min-height:307px;
+        }
+
+        .owl-nav{
+            
+            .owl-prev{
+                @extend .carousel_button;
+                left:-30px;
+                top:30%;
+                span{
+                    color:$color-blue;
+                    font-size:$fs-3;
+                }
+            }
+
+            .owl-next{
+                @extend .carousel_button;
+                right:-30px;
+                top:30%;
+                span{
+                    color:$color-blue;
+                    font-size:$fs-3;
+                }
+            }
+            .disabled{
+                display:none !important;
+            }
+        }
+        .owl-dots{
+            display:none;
+        }
+    }
+}

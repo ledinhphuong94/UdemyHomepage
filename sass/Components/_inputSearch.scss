@@ -1,0 +1,18 @@
+.udeInput__search{
+    input{
+        @include styleText($color-black-light,$fs-1,$fw-normal);   
+        padding:$pd-2 $pd-4; 
+        border-right:none;    
+        box-shadow: none !important;
+        background-color:$color-white-cream;
+        
+        
+    };
+    .input-group-text{
+        @include styleButton($color-red-0,$color-white-cream,$pd-3, $pd-4,$color-trans,$border-radius);
+        cursor: pointer;
+        &:hover{
+            @include styleButtonHover($color-white-0,$color-red-0); 
+        }
+    }
+}  

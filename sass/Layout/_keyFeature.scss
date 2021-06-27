@@ -1,0 +1,33 @@
+.keyFeatures{
+        background-color:$color-white-cream;
+        padding:$pd-2 0;  
+        .owl-theme .owl-dots .owl-dot span{
+            height:8px;
+            width:8px;
+        }
+
+        .owl-item{
+            min-height: 141px;
+            background-color: $color-white-0;
+            .keyFeatures__items{                         
+                .keyFeatures__details{
+                   
+                    padding:$pd-4;
+                    
+                    h3{
+                        @include styleText($color-black-0,$fs-5+1,$fw-bold-1);
+                        margin-bottom:$mg-0+2;
+                    }
+                    p{
+                        @include styleText($color-gray-4,$fs-0+1,$fw-bold-3);
+                    }
+            
+                }
+            }
+        
+        } 
+        
+
+    
+    
+}
